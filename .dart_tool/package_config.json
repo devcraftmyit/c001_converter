@@ -1,0 +1,19 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "prompter_rt",
+      "rootUri": "file:///C:/Users/Rob/Workspace/flutter/.pub-cache/hosted/pub.dartlang.org/prompter_rt-0.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "converter",
+      "rootUri": "../",
+      "packageUri": "lib/"
+    }
+  ],
+  "generated": "2020-11-02T09:53:40.742502Z",
+  "generator": "pub",
+  "generatorVersion": "2.10.1"
+}

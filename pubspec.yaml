@@ -1,0 +1,9 @@
+name: converter
+desription: A tool for image conversion
+version: 0.0.1
+
+dependencies:
+  prompter_rt:
+    version: 0.0.1
+
+    
