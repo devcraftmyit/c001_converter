@@ -7,7 +7,8 @@ void main() {
   if (!choice) {
     exit(0);
   }
-  prompter.askMultiple('Select Format', buildFormatOptions());
+  final format = prompter.askMultiple('Select Format', buildFormatOptions());
+  prompter.askMultiple('Select an Image to Convert', buildFileOptions());
 }
 
 List<Options> buildFormatOptions() {
@@ -15,4 +16,12 @@ List<Options> buildFormatOptions() {
     new Options('Convert to jpg', 'jpg'),
     new Options('Convert to png', 'png')
   ];
+}
+
+List<Options> buildFileOptions() {
+  [ // get a reference to the current working directory ] note this is the [bin ] folder in this exercise. Step 2
+[ // Find all the files and folders in this directory. // ] 
+[ // Look through the list and only find the images // ] 
+[ // Take all the images and create an option object for each // ] 
+
 }
