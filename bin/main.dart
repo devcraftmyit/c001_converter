@@ -8,7 +8,8 @@ void main() {
     exit(0);
   }
   final format = prompter.askMultiple('Select Format', buildFormatOptions());
-  prompter.askMultiple('Select an Image to Convert', buildFileOptions());
+  //prompter.askMultiple('Select an Image to Convert', buildFileOptions());
+  buildFileOptions();
 }
 
 List<Options> buildFormatOptions() {
@@ -19,9 +20,12 @@ List<Options> buildFormatOptions() {
 }
 
 List<Options> buildFileOptions() {
-  [ // get a reference to the current working directory ] note this is the [bin ] folder in this exercise. Step 2
-[ // Find all the files and folders in this directory. // ] 
-[ // Look through the list and only find the images // ] 
-[ // Take all the images and create an option object for each // ] 
+// get a reference to the current working directory ] note this is the [bin ] folder in this exercise.
+  final currentDirectory = Directory.current;
+// Find all the files and folders in this directory. // ] 
+  final entities = currentDirectory.listSync();
+  print(entities);
+   // Look through the list and only find the images // ] 
+// Take all the images and create an option object for each // ] 
 
 }
