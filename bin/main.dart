@@ -21,11 +21,10 @@ List<Options> buildFormatOptions() {
 
 List<Options> buildFileOptions() {
 // get a reference to the current working directory ] note this is the [bin ] folder in this exercise.
-  final currentDirectory = Directory.current;
-// Find all the files and folders in this directory. // ] 
-  final entities = currentDirectory.listSync();
-  print(entities);
-   // Look through the list and only find the images // ] 
-// Take all the images and create an option object for each // ] 
+   Directory.current.listSync().where((entity) {
+    return FileSystemEntity.isFileSync(entity.path);
+  });
+  // Look through the list and only find the images //
 
+// Take all the images and create an option object for each // ]
 }
