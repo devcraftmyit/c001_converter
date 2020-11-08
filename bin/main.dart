@@ -21,8 +21,9 @@ List<Options> buildFormatOptions() {
 
 List<Options> buildFileOptions() {
 // get a reference to the current working directory ] note this is the [bin ] folder in this exercise.
-   Directory.current.listSync().where((entity) {
-    return FileSystemEntity.isFileSync(entity.path);
+  Directory.current.listSync().where((entity) {
+    return FileSystemEntity.isFileSync(entity.path) &&
+        entity.path.contains(new RegExp(r'\.(png|jpg|jpeg)'));
   });
   // Look through the list and only find the images //
 
