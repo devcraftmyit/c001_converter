@@ -1,5 +1,6 @@
 import 'package:prompter_rt/prompter_rt.dart';
 import 'dart:io';
+import 'package:converter/src/converter.dart';
 
 void main() {
   final prompter = new Prompter();
@@ -8,7 +9,9 @@ void main() {
     exit(0);
   }
   final format = prompter.askMultiple('Select Format', buildFormatOptions());
-  final selectedFile = prompter.askMultiple('Select an Image to Convert', buildFileOptions());
+  final selectedFile =
+      prompter.askMultiple('Select an Image to Convert', buildFileOptions());
+  final newImage = convertImage(selectedFile, format);
 }
 
 List<Options> buildFormatOptions() {
